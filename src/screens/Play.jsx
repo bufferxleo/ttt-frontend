@@ -17,7 +17,7 @@ const Play = () => {
   const handleStart = async (e) => {
     e.preventDefault();
     try {
-      const user = await axios.post("http://localhost:5001/user/create", {
+      const user = await axios.post(`${process.env.REACT_APP_API_URL}user/create`, {
         nickName: name,
       });
       setAccount(user.data.user);
