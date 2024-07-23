@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {  HashRouter, Route, Routes } from "react-router-dom";
 import { AccountContextProvider } from "./context/AccountContext";
 import Start from "./screens/Start";
 import Play from "./screens/Play";
@@ -8,7 +8,7 @@ import { SocketContextProvider } from "./context/SocketContext";
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
         <AccountContextProvider>
           <SocketContextProvider>
             <Routes>
@@ -18,7 +18,7 @@ function App() {
             </Routes>
           </SocketContextProvider>
         </AccountContextProvider>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
